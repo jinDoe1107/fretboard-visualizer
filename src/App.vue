@@ -569,6 +569,8 @@ const chordNameParts = computed(() => {
       <p class="caption">
         {{ inst.label }} {{ strings }}弦 ・ チューニング: {{ tuningLabel }} ・ 上段が1弦(高音側) ・ 横スクロールで24フレットまで表示
       </p>
+
+      <footer class="copyright">© 2026 Studio Jin Doe</footer>
     </div>
   </div>
 </template>
@@ -819,6 +821,16 @@ const chordNameParts = computed(() => {
 .board { display: block; }
 
 .caption { font-size: 12px; color: #8a7d5e; margin-top: 12px; }
+
+.copyright {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(233,210,131,0.12);
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: #6f6650;
+}
 
 /* ─── 度数カラー (ルート:赤 / 3度:青 / 5度:緑 / その他:琥珀) ──── */
 .cat-root  { --fill: #e5484d; --stroke: #ff7b7f; --stroke-soft: rgba(255,123,127,0.4); --text: #ffffff; }
