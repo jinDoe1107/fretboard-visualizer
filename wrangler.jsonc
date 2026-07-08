@@ -1,0 +1,11 @@
+{
+  // 静的アセットのみの Worker として dist を配信する設定。
+  // これにより wrangler deploy は Vite フレームワーク自動設定(Vite 6+必須)を試みず、
+  // ビルド済み dist をそのままアップロードする。
+  "name": "fretboard-visualizer",
+  "compatibility_date": "2026-07-08",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
