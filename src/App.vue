@@ -593,7 +593,9 @@ const chordNameParts = computed(() => {
   padding: 28px 20px 48px;
 }
 
-.shell { max-width: 1400px; margin: 0 auto; }
+/* ボード自然幅(約1564px)＋枠を収められる幅。広い画面では全24フレットが表示され、
+   狭い画面では .board-wrap が横スクロールになる(フレットのサイズ感は不変) */
+.shell { max-width: 1600px; margin: 0 auto; }
 
 /* ─── ヘッダー ───────────────────────────────────────────────── */
 .amp-head {
