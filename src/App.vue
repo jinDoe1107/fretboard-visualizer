@@ -463,7 +463,12 @@ const chordNameParts = computed(() => {
 
       <!-- フレットボード: キャビネット風フレーム -->
       <div class="board-wrap">
-        <svg :width="SVG_W" :height="SVG_H" class="board" :style="{ minWidth: SVG_W + 'px' }">
+        <svg
+          class="board"
+          :viewBox="`0 0 ${SVG_W} ${SVG_H}`"
+          preserveAspectRatio="xMidYMid meet"
+          :style="{ maxWidth: SVG_W + 'px' }"
+        >
           <defs>
             <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stop-color="#3d2b1e" />
@@ -593,7 +598,7 @@ const chordNameParts = computed(() => {
   padding: 28px 20px 48px;
 }
 
-.shell { max-width: 1060px; margin: 0 auto; }
+.shell { max-width: 1400px; margin: 0 auto; }
 
 /* ─── ヘッダー ───────────────────────────────────────────────── */
 .amp-head {
@@ -818,7 +823,9 @@ const chordNameParts = computed(() => {
   padding: 16px 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,255,255,0.05);
 }
-.board { display: block; }
+/* コンテナ幅に合わせて縮小し、全24フレットを横スクロールなしで表示。
+   自然サイズ(SVG_W)を上限に拡大は抑制し中央寄せ。 */
+.board { display: block; width: 100%; height: auto; margin: 0 auto; }
 
 .caption { font-size: 12px; color: #8a7d5e; margin-top: 12px; }
 
