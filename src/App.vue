@@ -96,7 +96,6 @@ const CHORD_BASE = {
   sus4:  { iv: [0, 5, 7], deg: ["R", "4", "5"],  label: "sus4" },
   dim:   { iv: [0, 3, 6], deg: ["R", "♭3", "♭5"], label: "dim" },
   aug:   { iv: [0, 4, 8], deg: ["R", "3", "#5"],  label: "aug" },
-  power: { iv: [0, 7],    deg: ["R", "5"],        label: "5 (パワー)" },
 };
 
 const TENSIONS = [
@@ -170,11 +169,6 @@ function chordLabel(rootName, quality, tensions) {
     case "sus2":
     case "sus4":
       core = seventh + quality;
-      if (has("6")) exts.unshift("6");
-      break;
-    case "power":
-      core = "5";
-      if (seventh) exts.unshift(seventh === "M7" ? "M7" : "♭7");
       if (has("6")) exts.unshift("6");
       break;
     default:
