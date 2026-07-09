@@ -1,0 +1,12 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- アンプのトーレックス風ダークタイル -->
+  <rect width="32" height="32" rx="7" fill="#15120c"/>
+  <!-- ゴールドのパイピング(縁取り) -->
+  <rect x="1.4" y="1.4" width="29.2" height="29.2" rx="6" fill="none" stroke="#d4af4e" stroke-width="1.6"/>
+  <!-- ナット(ゴールドの縦バー) -->
+  <rect x="7" y="6.5" width="2.6" height="19" rx="1.1" fill="#e9d283"/>
+  <!-- 度数カラーの音符ドット: ルート(赤)/3度(青)/5度(緑) を上昇配置 -->
+  <circle cx="15" cy="22.5" r="3.4" fill="#e5484d" stroke="#ff7b7f" stroke-width="1"/>
+  <circle cx="20.2" cy="16"  r="3.4" fill="#4671e8" stroke="#82a3ff" stroke-width="1"/>
+  <circle cx="25.4" cy="9.5" r="3.4" fill="#2ea36b" stroke="#63d69e" stroke-width="1"/>
+</svg>
