@@ -225,8 +225,6 @@ const tuning = computed(() => {
   const t = inst.value.tunings;
   return t[strings.value] || t[inst.value.strings.min];
 });
-// 低音→高音の音名表記 (例: E A D G B E)
-const tuningLabel = computed(() => [...tuning.value].reverse().map((n) => NOTES[n]).join(" "));
 const nStr = computed(() => tuning.value.length);
 const boardH = computed(() => STR_GAP * (nStr.value - 1)); // 1弦〜最低弦の間隔
 const SVG_H = computed(() => TOP + boardH.value + 46);
@@ -560,9 +558,6 @@ const chordNameParts = computed(() => {
         </svg>
       </div>
 
-      <p class="caption">
-        {{ inst.label }} {{ strings }}弦 ・ チューニング: {{ tuningLabel }} ・ 上段が1弦(高音側) ・ 横スクロールで24フレットまで表示
-      </p>
 
       <footer class="copyright">© 2026 Studio Jin Doe</footer>
     </div>
@@ -816,8 +811,6 @@ const chordNameParts = computed(() => {
 }
 /* フレットボードは自然サイズ固定。コンテナより広い場合は .board-wrap が横スクロール */
 .board { display: block; }
-
-.caption { font-size: 12px; color: #8a7d5e; margin-top: 12px; }
 
 .copyright {
   margin-top: 20px;
